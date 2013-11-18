@@ -1,28 +1,31 @@
-== README
+Game Night
+============================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a board game night organizer and game library!
 
-Things you may want to cover:
+To get this app up and running, run these commands in console:
 
-* Ruby version
+```bash
+bundle install
+```
+```bash
+rake db:create:all
+```
+```bash
+rake db:migrate
+```
+```bash
+rake db:test:prepare
+```
 
-* System dependencies
+These commands do the following:
+  1. Install all of the necessary gems listed in the Gemfile
+  2. Create the test and development databases based on the configuration specified in config/database.yml
+  3. Add all of the tables and table attributes to the database defined in the migration files in db/migrate
+  4. Add all of the tables and table attributes to the test database
 
-* Configuration
+Then, to run the tests, run this command in console:
+```bash
+rspec spec
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
