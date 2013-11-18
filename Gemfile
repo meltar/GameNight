@@ -1,10 +1,27 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
+
+# Database
+gem 'pg', '0.15.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  gem 'rspec-rails', '~>2.14.0'
+  gem 'factory_girl_rails'
+	gem 'pry'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.0.0'
+  gem 'faker'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
